@@ -17,7 +17,7 @@ $$\frac{\partial T}{\partial t} = \alpha \left( \frac{\partial^2 T}{\partial x^2
 Where $\alpha$ is the thermal diffusivity, calculated as $\alpha = \frac{k}{\rho c_p}$.
 
 **Physical Parameters:**
-The material properties are approximated for a moist food product (batter/dough).
+The material properties are approximated for a moist food product.
 
 | Parameter | Symbol | Value | Unit |
 | :--- | :---: | :---: | :--- |
@@ -26,9 +26,6 @@ The material properties are approximated for a moist food product (batter/dough)
 | Specific Heat | $c_p$ | `3300.0` | $J / (kg \cdot K)$ |
 | **Thermal Diffusivity** | $\alpha$ | `1.30e-7` | $m^2 / s$ |
 * **Domain:** 10 cm * 10 cm cross-section.
-* **Thermal properties: k   = 0.45        # thermal conductivity [W / (m·K)]
-                        rho = 1050.0      # density [kg / m^3]
-                        cp  = 3300.0      # specific heat [J / (kg·K)]
 * **Initial Condition (IC):** Uniform temperature of 25C at t=0.
 * **Boundary Conditions (BC):** 180C (Oven temperature) on all edges.
 
