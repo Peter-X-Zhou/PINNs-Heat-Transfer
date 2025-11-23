@@ -13,8 +13,11 @@ The goal of this simulation is to solve the **2D Heat Diffusion Equation** witho
 ### The Physics Model
 * **Governing Equation:** 2D Transient Heat Equation
 * **Domain:** 10 cm * 10 cm cross-section.
+* **Thermal properties: k   = 0.45        # thermal conductivity [W / (m·K)]
+                        rho = 1050.0      # density [kg / m^3]
+                        cp  = 3300.0      # specific heat [J / (kg·K)]
 * **Initial Condition (IC):** Uniform temperature of 25C at t=0.
-* **Boundary Conditions (BC):** Dirichlet boundary conditions (Oven temperature) fixed at 180C on all four edges.
+* **Boundary Conditions (BC):** 180C (Oven temperature) on all edges.
 
 ## 🚀 How to Run the Code
 
