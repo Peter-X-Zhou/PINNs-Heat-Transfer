@@ -11,7 +11,20 @@ It implements a Physics-Informed Neural Network (PINN) to model transient heat t
 The goal of this simulation is to solve the **2D Heat Diffusion Equation** without using traditional mesh-based methods (like Finite Element Method). Instead, we use a neural network to approximate the temperature distribution T(x,y,t) by minimizing a loss function derived from the governing physical laws.
 
 ### The Physics Model
-* **Governing Equation:** 2D Transient Heat Equation
+**Governing Equation:**
+$$\frac{\partial T}{\partial t} = \alpha \left( \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} \right)$$
+
+Where $\alpha$ is the thermal diffusivity, calculated as $\alpha = \frac{k}{\rho c_p}$.
+
+**Physical Parameters:**
+The material properties are approximated for a moist food product (batter/dough).
+
+| Parameter | Symbol | Value | Unit |
+| :--- | :---: | :---: | :--- |
+| Thermal Conductivity | $k$ | `0.45` | $W / (m \cdot K)$ |
+| Density | $\rho$ | `1050.0` | $kg / m^3$ |
+| Specific Heat | $c_p$ | `3300.0` | $J / (kg \cdot K)$ |
+| **Thermal Diffusivity** | $\alpha$ | `1.30e-7` | $m^2 / s$ |
 * **Domain:** 10 cm * 10 cm cross-section.
 * **Thermal properties: k   = 0.45        # thermal conductivity [W / (m·K)]
                         rho = 1050.0      # density [kg / m^3]
